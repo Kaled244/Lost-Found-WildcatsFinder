@@ -1,0 +1,60 @@
+/* C:\Wildcats-Finder\Wildcats-Finder\frontend\src\App.css */
+body {
+  background-color: #F5EFE7; /* soft cream */
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  transition: margin-left 0.3s ease; /* Add transition for smooth collapse */
+}
+
+.App {
+  text-align: center;
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* When sidebar is present (authenticated) - Expanded */
+.main-content.with-sidebar {
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #F5EFE7;
+}
+
+/* When sidebar is collapsed */
+.main-content.with-sidebar.sidebar-collapsed,
+body.sidebar-collapsed .main-content.with-sidebar {
+  margin-left: 70px;
+}
+
+/* When no sidebar (not authenticated) */
+.main-content:not(.with-sidebar) {
+  margin-left: 0;
+  padding: 0;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 768px) {
+  .main-content.with-sidebar {
+    margin-left: 220px;
+  }
+  
+  .main-content.with-sidebar.sidebar-collapsed,
+  body.sidebar-collapsed .main-content.with-sidebar {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content.with-sidebar {
+    margin-left: 200px;
+  }
+  
+  .main-content.with-sidebar.sidebar-collapsed,
+  body.sidebar-collapsed .main-content.with-sidebar {
+    margin-left: 50px;
+  }
+}
